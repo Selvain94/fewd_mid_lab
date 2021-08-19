@@ -20,17 +20,25 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  .rover-header-container {
-      max-width: 100%;
-      flex-direction: column;
-      background-image: none;
+  .rover-header-container a{
+      display: none;
+      cursor:pointer;
   }
 }
+
+@media screen and (min-width:481px) {
+  #a10{display:none;}
+  #menu_btn{display:block;}
+  }
 
 @media only screen and (max-width: 480px) {
   .rover-header-left nav{
     display: none;
   }
+}
+
+@media screen and (max-width:480px) {
+  #menu_btn { display:inline-block; }
 }
 
 @media only screen and (max-width: 480px) {
@@ -41,9 +49,18 @@ body {
 
  @media only screen and (max-width: 480px) {
   .rover-header-right-mobile{
-    float: right;
+    display: inline-block;
+    cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .rover-hp-container{
+    background-image: url('img\mobile-hero-1.jpg') right no-repeat, url('img\mobile-hero-2.jpg') left;
+    width: 100%;
+  }
+}
+
 
 @media only screen and (max-width: 480px) {
   .rover-hero-container h1{
@@ -53,7 +70,8 @@ body {
 
 @media only screen and (max-width: 480px) {
   .rover-hero-container h2{
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+
   }
 }
 
@@ -63,12 +81,16 @@ body {
   }
 }
 
+
 @media only screen and (max-width: 480px) {
-  .rover-button-rover-cta-mobile{
-    justify-content: flex-end;
-    align-items: center;
+  #option .flex{
+    display: inline-block;
+    cursor: pointer;
+    top:0px;
+    right:0px
   }
 }
+
 
 @media only screen and (max-width: 480px) {
 .rover-cta-header{
@@ -85,29 +107,19 @@ body {
   }
 }
 
-  @media only screen and (max-width: 480px) {  
-  .rover-mobile-hero-container{
-    flex-direction: row;
-    gap: 15px;
-  }
-}
 
-  @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .rover-two-boxes-container{
     display: flex;
-    flex-direction: row;
-    width: max-content;
-    gap: 20px;
-    margin-left: 10px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-left: 5px;
   }
 }
-
-  @media only screen and (max-width: 480px) {
-  .rover-cta-box{
-    display: none;
-  }
-}
-
 
   @media only screen and (max-width: 480px) {
   .rover-action-shot{
@@ -117,15 +129,15 @@ body {
 
 @media only screen and (max-width: 480px) {
   .rover-quote{
-    display: none;
+    display: none
   }
 }
 
   @media only screen and (max-width: 480px) {
   .rover-action-dash{
     background-image: url('img\lady-with-her-dogs.jpg');
-    width: 100%;
-    height: auto;
+    width: fit-content;
+    height:fit-content;
   }
 }
 
@@ -150,14 +162,27 @@ body {
   align-items: center;
 }
 
+.rover-header-container nav{
+  justify-content: space-between;
+}
+
+.rover-header-container a{
+  text-decoration: none;
+  color: rgb(20, 8, 8);
+}
+
 .rover-header-left{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.rover-header-right-mobile{
-  display:none
+#option{
+  display: none;
+}
+
+#menu_btn{
+  display: none;
 }
 
 .rover-hero-title{
@@ -210,7 +235,7 @@ body {
 .rover-two-boxes-container{
   display: flex;
   flex-direction: row;
-  width: max-content;
+  width: 100%;
   gap: 100px;
   margin-left: 10%;
 }
@@ -238,7 +263,7 @@ body {
   line-height: 2.5;
 }
 
-.rover-cta{
+#rover-cta{
   background-color: rgb(8, 199, 8);
   color: white;
   text-align: center;
@@ -298,5 +323,5 @@ body {
   gap: 15px;
 }
 .rover-123-item-container h3{
-  width: auto
+  width: auto;
 }
